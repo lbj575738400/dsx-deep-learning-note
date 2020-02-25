@@ -1,0 +1,12 @@
+1.
+RMSProp、Adam、SGD Momentum都用到了Exponential Moving Average
+Adagrad的自适应学习率没有使用，而是对梯度平方进行累加，所以存在梯度消失问题
+
+2.
+Adagrad由于分母的不断累加，使学习率趋于零，出现梯度消失的问题
+Adelta没有超参数学习率，而是使用EMA的衰减系数
+
+3.
+Adam由于计算的梯度矩估计不同，对于大小相差加大的梯度也可以变为相近的大小
+Adam可以看作RMSProp与Momentum算法结合，计算的是无偏估计
+Adam使用了两次EMA，两次衰减系数可以不同

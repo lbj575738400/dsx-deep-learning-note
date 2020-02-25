@@ -1,0 +1,11 @@
+1.
+图像增广的作用是缓解过拟合，增加模型的泛化能力，降低模型对某些无效属性的依赖
+
+2.
+翻转，加入噪点，调整亮度都是图像增广的方法
+复制图片不仅不能达到图像增广的效果，反而会导致过拟合
+
+3.
+torchvision.transforms.RandomHorizontalFlip()表示图片水平翻转
+torchvision.transforms.RandomVerticalFlip()表示图片垂直翻转
+调用上述函数图片有一半概率发生翻转
